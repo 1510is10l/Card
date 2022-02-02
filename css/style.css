@@ -1,0 +1,179 @@
+/*
+* المتغيرات
+*/
+:root
+{
+    --oxford-blue: hsl(219.4,100%,72%);
+    --light-oxford-blue: hsl(216, 50%, 16%);
+    --indigo-dye: hsl(215, 32%, 27%);
+    --blue-yonder: hsl(216, 30%, 55%);
+    --Vivid-blue: hsl(209.6,100%,55.9%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+/*
+* إعادة تركيبة الموقع
+*/
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+    text-decoration: none;
+}
+
+body
+{
+    background: var(--oxford-blue);
+    min-height: 100vh;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+* البطاقة
+*/
+
+.card
+{
+    background: var(--light-oxford-blue);
+    max-width: 350px;
+    padding: 24px;
+    border-radius: 15px;
+    box-shadow: 0 20px 25px 15px rgba(0, 0, 0, 0.05),
+                0 40px 30px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card_prudect_img
+{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card_prudect_img::after
+{
+    --Vivid-blue: hsl(209.6,100%,55.9%, 0.5);
+    content: url(../images/view.svg);
+    background: var(--Vivid-blue);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.card_prudect_img:hover::after
+{
+    opacity: 1;
+}
+
+.card_prudect_img img
+{
+    width: 100%;
+    display: block;
+}
+
+.card_body
+{
+    padding: 23px 0;
+    border-bottom: 1px solid var(--indigo-dye);
+    margin-bottom: 15px;
+}
+
+.card_title
+{
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.card_title:hover
+{
+    color: var(--Vivid-blue);
+}
+
+.card_text
+{
+    color: var(--blue-yonder);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 23px;
+}
+
+.card_body .wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_price,
+.card_countdwon
+{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.card_price
+{
+    color: var(--Vivid-blue);
+}
+
+.card_icon
+{
+    margin-left: 6px;
+}
+
+.card_countdwon
+{
+    color: var(--blue-yonder);
+}
+
+.clock
+{
+    width: 20px;
+}
+
+.card_footer
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card_author_img
+{
+    width: 34px;
+    height: 34px;
+    border: 2px solid var(--white);
+    border-radius: 50px;
+    margin-left: 15px;
+}
+
+.card_author_name
+{
+    color: var(--white);
+    font-weight: 500;
+}
+
+.card_author_name a
+{
+    color: var(--white);
+    font-weight: 400;
+}
+
+.card_author_name a:hover
+{
+    color: var(--Vivid-blue);
+}
