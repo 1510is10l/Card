@@ -39,6 +39,13 @@ body
 * البطاقة
 */
 
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .card
 {
     background: var(--light-oxford-blue);
